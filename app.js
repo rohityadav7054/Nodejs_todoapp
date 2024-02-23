@@ -11,12 +11,14 @@ import cors from "cors";
 //add ,middleware..
 app.use(Express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin:'http://localhost:5173',
-  Credentials:true,
-  methods:'GET,PUT,POST,DELETE',
- 
-}))
+app.use(
+  cors({
+    origin: 'http://localhost:5173',
+    credentials: true, // Ensure this is set to true
+    methods: 'GET, PUT, POST, DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+  })
+);
 // Using Routes
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
