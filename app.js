@@ -13,7 +13,7 @@ app.use(Express.json());
 app.use(cookieParser());
 app.use(cors({
   origin:'http://localhost:5173',
-  Credential:true,
+  Credentials:true,
   methods:'GET,PUT,POST,DELETE',
  
 }))
