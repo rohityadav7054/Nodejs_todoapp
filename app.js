@@ -12,7 +12,7 @@ import cors from "cors";
 app.use(Express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin:[process.env.FRONTEND_URL],
+  origin:'http://localhost:5173',
   methods:["GET","POST","PUT","DELETE"],
   Credential:true,
 }))
